@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sshome-care",
+  "private_key_id": "0075d8aa86fc46e023d475f2001158cd09971ece",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCSb7juJmsGjbuo\n6gRA/SQx2pGnDKPc+k81PMEOH410ictD9rA69qGG7G/fcdcqA990UMElHOjUjs62\nOs3lpV+ATZc9vh2mrYndDI74sY7C5zFB2Y64yFAa2kOBNyjyM3cejXo0WZqTnT1t\nTmfSXUXsuNBDXcXbfXyXyIxzkuNWGFRWwT5YPGi7C4rcxYb4ujl108wCqjf5BWkY\nUgcJJM6SnMd89waVDKV8NNS75XfI32OQ+CgoSKHavi0mMYd/tZ1IERcIUPcf/lh5\nkvv6LSLrYv4FGrsQcQb9rvrl+O74jBGuSmggoECqvUE6iwQgNuMLWIsPehMQRgmk\nALF5FyRJAgMBAAECgf9izNgMcAW5LKeqfNOh6/a5X3iMw3QYneOs572mg2NnEN40\nKZ0XXo/2y+liheYsuUnRQ/fZzBRlInVJCyPtOnoIKlG0A5gkShiNkouXZmhyccpD\nw6XbLRir0j4stveWP2MZGhuTQ2GOQ+kBQ7iI43KD5Uee+QXysX5lNzDyr+7yuf8a\nSbREXGIKlUPfSppUZ48BDOLm/rL1d4Vlult2c3hfQaujSMJI4VGowYfuvOF52BZe\nLdHGuGOxZaqhHc0cxwP0cg7nGndhy87KLLv1wP0WU56lXbqVbLa1eUsM5f1yBqEf\n4qEbSWyVYyozLANg7macgPtQ5Abhnue93OdZi4ECgYEAwsd3t8vbytXuayHYXaeA\ncK65vha6tOEZpYuXK61cM/cStFriek6kcBBNQBcuPBiHXOqHtTUYw7s0YCD1F3BI\nz69xYlvuRYtDLxt3ymHIoitqk9FEIASqxvjeNOxU31dlHEKtDP4XxdlBKOLQ8kLO\nPZVpwjolw2FJAYTi+MF15MkCgYEAwHZym3ndmNC/ca8PSYWul9FaK6JgOcJ9aZBJ\n1oS3B29xjn3HoWeC/h3x5VyxlNF4NJQJYtL3TSbbkCPUiFMKpSkT4ow0yytVZE2R\nw+dVWawM26AqYg7+KsZTTvY1GecCwhBnvAD55A5YkEP1x68GyE00V/CtqCu2dybC\nWv28g4ECgYEAgfAfZXWRwtbEnqONe6zqekGVl8IB+/jO6ykcR/72q5P/3mFjBMTB\n3iCB6GeOaHjUlJ/AuJobUzfn0Nkrp984M5SOx1cctTgaMarZVyG0frsH9mR8Vf/H\nDcWoNxYR6Iyc3yV73FcF9O7iESx+x57ZhyvNycyQtK6JzYGhCOHGjEECgYEAhcFL\nwPWepZddlTpeW3BGeEgMbIq6aSnbUsPuLOGq+cXfm3GajXeMt+JDvG0BFTXGXnQL\nWdzX9Yxtxuy/xcZAfavgn+9kuVXyUHUAOq/Ixzsk7HWRPvjAdyXBu/yrxsafShNw\npF3hTTcTIZ+5bf8brZTKLducNGW8t23+YJI6swECgYAA0O5gWYvHv/ephWzt0RyM\n2hNxTK2xjIwYUngL4xlt99X9jnGH3hHtrxghJQDmhtyqJ0BDFFrVIlO8a0D/3owB\n80XNXnLmGLlDa1eiT8bOP545aycMOsfnweB7k3k6SJC1dIW7p/6tEfmB2RV9YSqU\nyn3t0QIxU2eVxYCMUwkBVw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sshomecare-serviceaccount@sshome-care.iam.gserviceaccount.com",
+  "client_id": "106934782871416098320",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sshomecare-serviceaccount%40sshome-care.iam.gserviceaccount.com"
+}
