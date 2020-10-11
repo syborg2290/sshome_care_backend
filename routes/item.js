@@ -62,26 +62,47 @@ router.get("/getAllItems", async (req, res) => {
 
 router.post("/updateItem", async (req, res) => {
   try {
-    var sql = `UPDATE item SET 
-    item_name=${req.body["itemName"]}, 
-    photo=${req.body["itemDownImageUrl"]}, 
-    brand=${req.body["brand"]},
-    model_no=${req.body["modelNo"]},
-    chassis_no=${req.body["chassisNo"]},
-    color=${req.body["color"]},
-    qty=${req.body["qty"]},
-    cash_price=${req.body["cashPrice"]},
-    sale_price=${req.body["salePrice"]},
-    down_payment=${req.body["downPayment"]},
-    no_of_installments=${req.body["noOfInstallments"]},
-    amount_per_installment=${req.body["amountPerInstallment"]},
-    guarantee_months_years=${req.body["guarantee"]["value"]},
-    guarantee_period=${req.body["guaranteePeriod"]},
-    discount=${req.body["discount"]},
-    description=${req.body["description"]},
-    company_invoice_no=${req.body["cInvoiceNo"]},
-    guarantee_card_no=${req.body["GCardNo"]} `+`WHERE item_id=${req.body["item_id"]}`;
-     
+    var sql =
+      "UPDATE item SET item_name = '" +
+      req.body["itemName"] +
+      "',photo = '" +
+      req.body["itemDownImageUrl"] +
+      "',brand = '" +
+      req.body["brand"] +
+      "',model_no = '" +
+      req.body["modelNo"] +
+      "',chassis_no = '" +
+      req.body["chassisNo"] +
+      "',color = '" +
+      req.body["color"] +
+      "',qty = '" +
+      req.body["qty"] +
+      "',cash_price = '" +
+      req.body["cashPrice"] +
+      "',sale_price = '" +
+      req.body["salePrice"] +
+      "',down_payment = '" +
+      req.body["downPayment"] +
+      "',no_of_installments = '" +
+      req.body["noOfInstallments"] +
+      "',amount_per_installment = '" +
+      req.body["amountPerInstallment"] +
+      "',guarantee_months_years = '" +
+      req.body["guarantee"]["value"] +
+      "',guarantee_period ='" +
+      req.body["guaranteePeriod"] +
+      "',discount ='" +
+      req.body["discount"] +
+      "',description ='" +
+      req.body["description"] +
+      "',company_invoice_no = '" +
+      req.body["cInvoiceNo"] +
+      "',guarantee_card_no = '" +
+      req.body["GCardNo"] +
+      "' WHERE item_id = '" +
+      req.body["item_id"] +
+      "'";
+
     await connection.query(sql, function (err, results) {
       if (err) {
         throw err;
@@ -95,22 +116,20 @@ router.post("/updateItem", async (req, res) => {
   }
 });
 
-
-router.get("/deleteItem", async (req, res) => {
+router.post("/deleteItem", async (req, res) => {
   try {
-    var sql = `DELETE FROM item`+` WHERE item_id = ${req.body["item_id"]}`;
+    var sql = `DELETE FROM item` + ` WHERE item_id = ${req.body["item_id"]}`;
     await connection.query(sql, function (err, results) {
       if (err) {
         throw err;
       }
 
-     res.status(200).send("Success");
+      res.status(200).send("Success");
     });
   } catch (e) {
     console.log(e);
     res.status(500).send("Server Error");
   }
 });
-
 
 module.exports = router;

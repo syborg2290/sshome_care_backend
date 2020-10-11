@@ -15,7 +15,6 @@ router.post(
   sendUploadToGCS,
   (req, res, next) => {
     try {
-
       res
         .status(200)
         .json({ publicUrl: req.files[0]["cloudStoragePublicUrl"] });

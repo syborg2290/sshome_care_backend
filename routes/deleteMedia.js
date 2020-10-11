@@ -7,27 +7,24 @@ const storage = new Storage({
   projectId: process.env.GCLOUD_PROJECT_ID,
   keyFilename: process.env.KEYFILE_PATH,
 });
-const bucket = storage.bucket(CLOUD_BUCKET);
 
-router.post("/deleteImage",  (req, res) => {
-    try {
-      new Promise((resolve, reject) => {
-    var imageurl = req.body["imageUrl"].split("/");
-    imageurl = imageurl.slice(4, imageurl.length + 1).join("/");
+router.post("/deleteImage", (req, res) => {
+  try {
+    new Promise((resolve, reject) => {
+      var imageurl = req.body["imageUrl"].split("/");
+      imageurl = imageurl.slice(4, imageurl.length + 1).join("/");
 
-    storage
-        .bucket(GCLOUD_BUCKET)
+      storage
+        .bucket(CLOUD_BUCKET)
         .file(imageurl)
         .delete()
         .then((image) => {
-            res.status(200).send("Success");
+          res.status(200).send("Success");
         })
         .catch((e) => {
-            reject(e)
+          reject(e);
         });
-
-});
-    
+    });
   } catch (e) {
     console.log(e);
     res.status(500).send("Server Error");
