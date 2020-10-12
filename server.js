@@ -71,8 +71,8 @@ io.on("connection", function (socket) {
 });
 
 
-const port1 = process.env.PORT || 9000;
-const port2 = process.env.PORT || 6000;
+const port1 = process.env.PORT || 9095;
+const port2 = process.env.PORT || 6065;
 
 app.listen(port1, () => {
   console.log("App running on port 5000");
