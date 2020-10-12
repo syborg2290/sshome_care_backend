@@ -1,11 +1,22 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors_proxy = require('cors-anywhere');
 const app = express();
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+
+const PORT = process.env.PORT || 5000;
+
+cors_proxy.createServer({
+    originWhitelist: [], // Allow all origins
+    requireHeader: ['origin', 'x-requested-with'],
+    removeHeaders: ['cookie', 'cookie2']
+}).listen(port, host, function() {
+    console.log('Running CORS Anywhere on :' + port);
+});
 
 app.use(cors());
 app.use(express.json());
@@ -26,9 +37,6 @@ app.get("/", (req, res) => {
 app.use("/api/item", require("./routes/item"));
 app.use("/api/imageUpload", require("./routes/uploadMedia"));
 app.use("/api/deleteImage", require("./routes/deleteMedia"));
-
-
-const PORT = process.env.PORT || 5000;
 
 
 app.listen(PORT, () => {

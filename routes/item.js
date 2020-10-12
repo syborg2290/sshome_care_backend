@@ -51,8 +51,6 @@ router.get("/getAllItems", async (req, res) => {
       if (err) {
         throw err;
       }
-      
-      res.header('X-XSS-Protection' , 0 );
       res.status(200).send(results);
     });
   } catch (e) {
