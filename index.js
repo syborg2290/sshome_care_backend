@@ -67,10 +67,14 @@ io.on("connection", function (socket) {
   });
 });
 
-app.listen(5000, () => {
+
+const port1 = process.env.PORT || 5000;
+const port2 = process.env.PORT || 4000;
+
+app.listen(port1, () => {
   console.log("App running on port 5000");
 });
 
-server.listen(4000, () => {
+server.listen(port2, () => {
   console.log("Server running on port 4000");
 });
