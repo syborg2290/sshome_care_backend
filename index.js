@@ -16,6 +16,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(helmet());
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 const server = http.createServer(app);
 const io = socketio(server);
 const connectionDb = require("./database");
